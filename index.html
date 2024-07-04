@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="top-box">
+        <h2>Password Generator</h2>
+    </div>
+    <div class="content-box">
+        <h3>Password</h3>
+        <div class="middle-icon">
+            <span id="thepassword"><div id="password-box">loading...</div></span>
+            <button onclick="getpassword()"><img src="refresh.png"><i class="refresh"></i></button>
+            <button onclick="tocopy()"><img src="paper-removebg-preview.png">
+         </button>
+        </div>
+    </div>
+    <div class="footer"><footer><h4>22/06/24</h4></footer></div>
+
+    <script>
+//Creates an empty password
+let password = '';
+
+const passwordbox = document.getElementById("password-box");
+
+//List of possible characters
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#%^*?';
+
+// Now password has 12 random characters
+function getpassword(){
+    for (let i = 0; i < 12; i++) { // Step 3: Loop 12 times to pick 12 characters
+  const randomIndex = Math.floor(Math.random() * characters.length);
+  const randomCharacter = characters[randomIndex];
+
+  // Add the random character to the password
+  password += randomCharacter;
+}
+    console.log(password);
+    // Display the generated password
+    passwordbox.innerText = password;
+    password = '';
+    }
+    
+    function tocopy() {
+        const password = passwordbox.innerText;
+        // Create a temporary input element
+        const tempInput = document.createElement('input');
+            tempInput.value = password;
+            document.body.appendChild(tempInput);
+
+            // Select the text in the input element
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text
+            document.execCommand('copy');
+
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+
+            // Alert the user
+            alert('Password copied to clipboard!');
+        }
+  // Select the text field
+  //passwordbox.select();
+  //passwordbox.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  //navigator.clipboard.writeText(passwordbox.value);
+
+  // Alert the copied text
+  //alert("Copied the text: " + copyText.value);
+//}
+    
+
+        //const passwordbox = document.getElementById("password-box");
+        //const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        //let getpassword = '';
+       //Loop 12 times to pick 12 characters
+     //function getpassword(){
+        //for (let i = 0; i < 12; i++) {
+      // Pick a random character from the list
+      //const randomIndex = Math.floor(Math.random() * characters.length);
+      //const randomCharacter = characters[randomIndex]; 
+
+      // Add the random character to the password
+      //getpassword += randomCharacter;
+       // }
+     //}
+     // Now password has 12 random characters
+         //console.log( getpassword);
+         //password-box.innerHTML += getpassword;
+    </script>
+</body>
+</html>

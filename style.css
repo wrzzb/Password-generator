@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+   }
+
+   body{
+    background:  #fdf6fb;
+   }
+
+   .top-box{
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    background: #ffbfe5;
+    color: white;
+    font-size: 20px;
+    /*box-shadow: 0px 5px 10px 0px rgba(41, 3, 22, 0.15);*/
+   }
+   .top-box h2{
+    padding: 20px;
+   }
+   .content-box{
+    background: #ffbfe5;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px; /* space inside the box*/
+    border-radius: 10px;
+    text-align: center; /* move text to center*/ 
+    box-shadow: 0px 10px 20px 0px rgba(41, 3, 22, 0.15);
+   }
+   .content-box h3{
+    color: #ffffff;
+    font-size: 25px;
+    position: relative;
+    padding-bottom: 40px;
+   }
+   .content-box #password-box{
+    position: relative;
+    color: #4d1d39;
+    background: #fffafd;
+    border-radius: 37px;
+    font-size: 20px;
+    height: 65px;
+    text-align: center; /* move text to center*/ 
+    padding: 20px 200px;
+   }
+   .content-box span{
+    position: relative;
+    top: -12px;
+    color: black;
+   }
+   .content-box span::after{
+    content: '';
+   }
+   .content-box button{
+    background: none;
+    border: none;
+    justify-content: center;
+    border-radius: 100%;
+   }
+   .content-box img{
+    width: 75px;
+    position: relative;
+    top: 15px;
+  }
+  .content-box img:hover {
+    position: relative;
+    top: 20px;
+    background-color: transparent;
+    border-radius: 100%;
+    cursor: pointer;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: #f5bcde;
+    color: white;
+    text-align: center;
+    /*box-shadow: 5px 5px 10px 10px rgba(41, 3, 22, 0.15);*/
+  }
+  h4{
+    opacity: 70%;
+  }
+   /*.generate button a:hover {
+    cursor: pointer;
+    background-color: #ddd;
+    color: rgb(255, 139, 207);
+    cursor: pointer;
+   }*/ 
+   
